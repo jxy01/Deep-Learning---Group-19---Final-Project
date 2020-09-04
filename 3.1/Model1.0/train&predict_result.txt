@@ -1,0 +1,77 @@
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2020-08-26 15:39:19.617620: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-08-26 15:39:19.622126: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library nvcuda.dll
+2020-08-26 15:39:20.414173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:02:00.0
+2020-08-26 15:39:20.415054: I tensorflow/stream_executor/platform/default/dlopen_checker_stub.cc:25] GPU libraries are statically linked, skip dlopen check.
+2020-08-26 15:39:20.417401: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-08-26 15:39:21.669831: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-08-26 15:39:21.670209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2020-08-26 15:39:21.670425: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2020-08-26 15:39:21.671728: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1347 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050, pci bus id: 0000:02:00.0, compute capability: 6.1)
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              multiple                  240       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) multiple                  0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            multiple                  7812      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 multiple                  0         
+_________________________________________________________________
+flatten (Flatten)            multiple                  0         
+_________________________________________________________________
+dense (Dense)                multiple                  10616960  
+_________________________________________________________________
+dense_1 (Dense)              multiple                  258       
+=================================================================
+Total params: 10,625,270
+Trainable params: 10,625,270
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 49 samples, validate on 201 samples
+Epoch 1/5
+
+ 4/49 [=>............................] - ETA: 3s - loss: 0.6458 - acc: 0.7500
+16/49 [========>.....................] - ETA: 0s - loss: 7.2081 - acc: 0.4375
+28/49 [================>.............] - ETA: 0s - loss: 4.8385 - acc: 0.5000
+40/49 [=======================>......] - ETA: 0s - loss: 3.6151 - acc: 0.5000
+49/49 [==============================] - 1s 25ms/sample - loss: 3.1180 - acc: 0.4490 - val_loss: 0.6963 - val_acc: 0.5224
+Epoch 2/5
+
+ 4/49 [=>............................] - ETA: 0s - loss: 0.6853 - acc: 0.5000
+16/49 [========>.....................] - ETA: 0s - loss: 0.6950 - acc: 0.5000
+28/49 [================>.............] - ETA: 0s - loss: 0.7107 - acc: 0.4643
+40/49 [=======================>......] - ETA: 0s - loss: 0.6953 - acc: 0.5500
+49/49 [==============================] - 1s 16ms/sample - loss: 0.7002 - acc: 0.4898 - val_loss: 0.6957 - val_acc: 0.5423
+Epoch 3/5
+
+ 4/49 [=>............................] - ETA: 0s - loss: 0.5731 - acc: 1.0000
+16/49 [========>.....................] - ETA: 0s - loss: 0.6403 - acc: 0.8125
+28/49 [================>.............] - ETA: 0s - loss: 0.6528 - acc: 0.7500
+40/49 [=======================>......] - ETA: 0s - loss: 0.6450 - acc: 0.8000
+49/49 [==============================] - 1s 16ms/sample - loss: 0.6419 - acc: 0.7551 - val_loss: 0.7434 - val_acc: 0.4826
+Epoch 4/5
+
+ 4/49 [=>............................] - ETA: 0s - loss: 0.6112 - acc: 1.0000
+16/49 [========>.....................] - ETA: 0s - loss: 0.5628 - acc: 0.9375
+28/49 [================>.............] - ETA: 0s - loss: 0.5743 - acc: 0.7857
+40/49 [=======================>......] - ETA: 0s - loss: 0.5575 - acc: 0.7500
+49/49 [==============================] - 1s 15ms/sample - loss: 0.5409 - acc: 0.7755 - val_loss: 0.8365 - val_acc: 0.4975
+Epoch 5/5
+
+ 4/49 [=>............................] - ETA: 0s - loss: 0.4698 - acc: 1.0000
+16/49 [========>.....................] - ETA: 0s - loss: 0.3734 - acc: 0.8750
+28/49 [================>.............] - ETA: 0s - loss: 0.4392 - acc: 0.7857
+40/49 [=======================>......] - ETA: 0s - loss: 0.4478 - acc: 0.8250
+49/49 [==============================] - 1s 16ms/sample - loss: 0.4512 - acc: 0.7959 - val_loss: 0.7592 - val_acc: 0.5124
+
+32/76 [===========>..................] - ETA: 0s - loss: 0.5968 - acc: 0.8438
+76/76 [==============================] - 0s 4ms/sample - loss: 0.7223 - acc: 0.6184
+Test accuracy: 0.6184211
+
+Process finished with exit code 0

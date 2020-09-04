@@ -1,0 +1,6 @@
+C:\Users\zxm\anaconda3\python.exe D:/Python/MITSummer/Model2.0/predict.py
+203
+
+DenseNet.pt, recall: 0.8667, precision: 0.7845,F1: 0.8235, accuracy: 0.8079, AUC: 0.8466
+
+Process finished with exit code 0
